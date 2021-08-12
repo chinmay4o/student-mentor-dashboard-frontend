@@ -1,0 +1,20 @@
+.editdetails-parent {
+  display: flex;
+}
+
+.editdetails-child {
+  width: calc(100% - 7em);
+  min-height: calc(100vh - 70px);
+  background-color: #212529;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.btn1 {
+  display: block !important;
+}
+
+form {
+  width: 600px;
+}

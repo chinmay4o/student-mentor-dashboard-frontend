@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent {
+  width: 100%;
+  min-height: calc(100vh - 70px);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #dedede;
 }
 
-.App-link {
-  color: #61dafb;
+/* .parent {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+
+} */
+/* .parent {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191d14;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23b8ff6a' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+} */
+
+h2 {
+  font-family: montserrat;
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  border-radius: 10px;
+  padding: 50px;
+  background: #212529;
+  height: 500px;
+  display: grid;
+  place-items: center;
+  background: #212529;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 1.2em;
+}
+
+.form1 {
+  background: #212529;
+  color: #fff;
+  width: 50%;
+}
+
+.btn1 {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.link1 {
+  width: 70%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 16px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.btnn{
+  font-family: montserrat;
+  font-weight: 600 !important;
+}
+
+/* #navbarNav{
+  justify-content: flex-end;
+} */
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .container {
+    padding: 25px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-link {
+    font-size: 1.2em;
+  }
+
+  .form1 {
+    width: 95%;
+  }
+
+  .link1 {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .btn1 {
+    width: 95%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .container {
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    font-size: 1.2em;
+  }
+
+  .form1 {
+    width: 70%;
+  }
+
+  .link1 {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .btn1 {
+    width: 95%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    font-size: 1.2em;
+  }
+
+  .form1 {
+    width: 50%;
   }
 }

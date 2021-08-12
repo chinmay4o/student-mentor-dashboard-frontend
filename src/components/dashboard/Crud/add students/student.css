@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+.addstu-parent{
+  display: flex;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  color: #fff;
+  overflow-y: hidden;
+}
+
+.addstu-child {
+  width: calc(100% - 7em);
+  border: 2px solid #fff;
+  min-height: 100%;
+  border-radius: 9px;
+  padding: 30px;
+  color: #fff;
+  background: #212529;
+}
+
+.table-list,
+.student-list {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.table-list{
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.btn1 {
+  display: block !important;
+  font-family: montserrat !important;
+  font-weight: 600 !important;
+  width: 70%;
+  margin: 30px auto;
+}

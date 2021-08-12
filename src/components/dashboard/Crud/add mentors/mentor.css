@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+.addMentor-parent {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  color: #fff;
+  overflow-y: hidden;
+}
+
+.addMentor-container {
+  width: calc(100% - 7em);
+  border: 2px solid #fff;
+  min-height: calc(100% - 70px);
+  border-radius: 9px;
+  padding: 30px;
+  color: #fff;
+}
+
+.addMentor-container {
+  background: #212529;
+}
+
+.div1,
+.div2 {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 25px;
+}
+.div2 {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.btn1 {
+  display: block !important;
+  font-family: montserrat !important;
+  font-weight: 600 !important;
+  width: 70%;
+  margin: 30px auto;
+}
