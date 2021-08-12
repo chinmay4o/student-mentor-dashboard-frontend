@@ -8,15 +8,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AssignMentor = () => {
   const [students, setStudents] = useState([]);
-  const [filteredStudents, setFilteredStudents] = useState([]);
+
   const [mentors, setMentors] = useState([]);
   const [assignMentors, setAssignMentors] = useState({
     id: "",
     name: "",
   });
   const [assignStudents, setAssignStudents] = useState([]);
-
-  const [count, setCount] = useState(0);
 
 
   //toast function
@@ -56,7 +54,7 @@ const AssignMentor = () => {
       style={ele.mentorId ? {"display" : "none"} : {"display" : "block"}}
       >
         <input
-          class="form-check-input me-3 p-2"
+          className="form-check-input me-3 p-2"
           type="checkbox"
           value=""
           aria-label="..."
@@ -91,8 +89,6 @@ const AssignMentor = () => {
     return (
       <PrintMentor
         ele={{ ...ele }}
-        count={count}
-        setCount={setCount}
         assignMentors={assignMentors}
         setAssignMentors={setAssignMentors}
       />
@@ -133,6 +129,7 @@ const AssignMentor = () => {
     <>
       <div className="assign-parent">
         <Dashboard />
+        <ToastContainer />
         <div className="assign-child">
           <div className="row g-4">
             {/* students list */}
@@ -143,9 +140,9 @@ const AssignMentor = () => {
                 {students.length > 0 ? (
                   students.map(printStudents)
                 ) : (
-                  <div class="d-flex justify-content-center">
-                    <div class="spinner-border" role="status">
-                      <span class="visually-hidden">Loading...</span>
+                  <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                      <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
                 )}
@@ -159,9 +156,9 @@ const AssignMentor = () => {
                 {mentors.length > 0 ? (
                   mentors.map(printMentors)
                 ) : (
-                  <div class="d-flex justify-content-center">
-                    <div class="spinner-border" role="status">
-                      <span class="visually-hidden">Loading...</span>
+                  <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                      <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
                 )}

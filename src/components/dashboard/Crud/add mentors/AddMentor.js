@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Dashboard from "../../Dashboard.js";
 import "./mentor.css";
-import ReactTooltip from "react-tooltip";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -43,6 +42,22 @@ const AddMentor = () => {
     console.log(data1);
   }
 
+  //delete mentor
+  async function deleteMentor(id) {
+    console.log(id);
+    const response = await fetch("http://localhost:5004/mentorDelete", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+
+    if(response.status === 200){
+      getMentors();
+      notify();
+    }
+   
+  }
+
   //mapping details of mentors .map menthod
   function mapTable(ele, index) {
     return (
@@ -50,9 +65,9 @@ const AddMentor = () => {
         <th scope="row">{index}</th>
         <td>{ele.fname}</td>
         <td>{ele.lname}</td>
-        <td>{ele.dateCreated}</td>
-        <td role="button" onClick={() => true}>
-          delete Me!
+        <td role="button" 
+        onClick={() => deleteMentor(ele._id)}>
+          delete!
         </td>
       </tr>
     );
@@ -113,14 +128,13 @@ const AddMentor = () => {
           </form>
 
           <div className="col-12 col-md-6 div2">
-            <table class="table table-striped table-dark mt-5 ">
+            <table className="table table-striped table-dark mt-5 ">
               <thead>
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">First</th>
                   <th scope="col">Last</th>
-                  <th scope="col">Date added</th>
-                  <th scope="col">Delete</th>
+                  <th scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody>{data.map(mapTable)}</tbody>

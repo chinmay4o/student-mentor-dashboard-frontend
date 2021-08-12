@@ -19,7 +19,7 @@ const Dashboard = () => {
           <Sidebar />
         ) : (
           <i
-            class="font sha-open rounded bi bi-arrow-right-square-fill"
+            className="font sha-open rounded bi bi-arrow-right-square-fill"
             onClick={sidebarHandler}
           ></i>
         )}
@@ -36,7 +36,7 @@ function Btn({setWith}) {
   return (
     <div className="close-btn">
       <i
-        class="bi sha-close rounded bi-arrow-up-left-square-fill mb-5"
+        className="bi sha-close rounded bi-arrow-up-left-square-fill mb-5"
         onClick={closeSidebar}
       ></i>
     </div>

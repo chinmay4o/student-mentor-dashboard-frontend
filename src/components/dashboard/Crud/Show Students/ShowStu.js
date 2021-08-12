@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Dashboard from "../../Dashboard.js";
-import ReactTooltip from "react-tooltip";
+// import ReactTooltip from "react-tooltip";
 import "./showstu.css";
 
 const ShowStu = () => {
@@ -44,7 +44,7 @@ const ShowStu = () => {
     if (mentorId) {
       if (ele.mentorId === mentorId) {
         return (
-          <li class="list-group-item" key={index}>
+          <li className="list-group-item" key={index}>
             {ele.fname}
           </li>
         );
@@ -70,7 +70,7 @@ const ShowStu = () => {
         </p>
         <div className="div3">
           <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             onChange={(e) => {
               setMentorId(e.target.value);
@@ -81,7 +81,7 @@ const ShowStu = () => {
             {Mentordata.length > 0 ? Mentordata.map(printMentors) : null}
           </select>
 
-          <ul class="list-group">
+          <ul className="list-group">
             {StuData.length > 0 ? StuData.map(printStuData) : null}
           </ul>
         </div>

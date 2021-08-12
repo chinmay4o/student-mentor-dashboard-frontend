@@ -73,13 +73,13 @@ const notify1 = () => {
         <th scope="row">{index}</th>
         <td>{ele.fname}</td>
         <td>{ele.lname}</td>
-        <td colspan="1">{ele.mentorName}</td>
+        <td colSpan="1">{ele.mentorName}</td>
         <td role="button">
           <div className="row">
             <div className="col-6">
               <i
                 onClick={() => deleteStudent(ele._id)}
-                class="bi  bi-person-x-fill"
+                className="bi  bi-person-x-fill"
                 data-tip="Delete user"
                 data-background-color="red"
               ></i>
@@ -88,7 +88,7 @@ const notify1 = () => {
             <div className="col-6">
               <i
                 onClick={() => history.push(`/editdetails/${ele._id}`)}
-                class="bi bi-pencil-square"
+                className="bi bi-pencil-square"
                 data-tip="Edit user"
                 data-background-color="blue"
               ></i>
@@ -110,6 +110,7 @@ const notify1 = () => {
       <div className="addstu-child p-5">
         <div className="row g-4">
           <p className="fw-bold fs-3 mb-3 justify-content-center d-grid">
+         
             Add Students to the database
           </p>
 
@@ -159,7 +160,7 @@ const notify1 = () => {
               Existing Students
             </p>
 
-            <table class="table table-striped table-dark mt-3 table-bordered align-middle">
+            <table className="table table-striped table-dark mt-3 table-bordered align-middle">
               <thead>
                 <tr>
                   <th scope="col">#</th>

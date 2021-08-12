@@ -1,11 +1,11 @@
 import './App.css';
-import {BrowserRouter as Router , Route , Switch , Link } from "react-router-dom";
+import { Route , Switch  } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import AddStudent from "./components/dashboard/Crud/add students/AddStudent";
 import EditStudent from "./components/dashboard/Crud/add students/EditStudent";
 import AddMentor from "./components/dashboard/Crud/add mentors/AddMentor";
-import Dashboard from "./components/dashboard/Dashboard";
+// import Dashboard from "./components/dashboard/Dashboard";
 import About from "./components/About.js";
 import AssignMentor from "./components/dashboard/Crud/Assign Mentors/AssignMentor.js";
 import ChangeMentor from "./components/dashboard/Crud/Change Mentors/ChangeMentors.js";

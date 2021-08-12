@@ -3,9 +3,12 @@ import { useHistory, useParams } from "react-router-dom";
 import "./edit.css";
 import Dashboard from "../../Dashboard.js";
 import ReactTooltip from "react-tooltip";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const EditStudent = () => {
   const { id } = useParams();
+  const history = useHistory();
   const [data, setData] = useState({});
 
   async function getStudentDetails() {
@@ -20,6 +23,11 @@ const EditStudent = () => {
     setData(data1);
     console.log(data);
   }
+
+  //toast function
+  const notify = () => {
+    toast("student updated! ");
+  };
 
   //name change handlers
   function fnameHandler(e) {
@@ -41,7 +49,7 @@ const EditStudent = () => {
     });
 
     if (response.status === 200) {
-      alert("success");
+      notify();
       const d = await response.json();
       console.log(d);
     }
@@ -54,13 +62,19 @@ const EditStudent = () => {
   return (
     <div className="editdetails-parent">
       <Dashboard />
-      <div className="editdetails-child container">
+      <ToastContainer />
+      <div className="editdetails-child">
         <form>
+          <i
+          type="button"
+            className="bi bi-arrow-bar-left fs-5 mb-3 fw-bold"
+            onClick={(e) => history.push("/addstudent")}
+          >Go Back</i>
           <p className="fs-3 fw-bold justify-content-center">
             Edit Student Details :
           </p>
-          <div class="mb-3">
-            <label htmlFor="fname" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="fname" className="form-label">
               First Name
             </label>
             <input
@@ -72,25 +86,25 @@ const EditStudent = () => {
               onChange={(e) => fnameHandler(e)}
             />
           </div>
-          <div class="mb-3">
-            <label for="lname" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="lname" className="form-label">
               Last Name
             </label>
             <input
               type="text"
-              class="form-control fw-bold"
+              className="form-control fw-bold"
               id="lname"
               onChange={(e) => lnameHandler(e)}
               value={data.lname}
             />
           </div>
-          <div class="mb-3">
-            <label for="lname" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="lname" className="form-label">
               Assigned Mentor
             </label>
             <input
               type="text"
-              class="form-control fw-bold"
+              className="form-control fw-bold"
               id="lname"
               value={data.mentorName}
               readonly
@@ -99,7 +113,7 @@ const EditStudent = () => {
             <ReactTooltip />
           </div>
 
-          {/* <select class="form-select" aria-label="Default select example">
+          {/* <select className="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -108,7 +122,7 @@ const EditStudent = () => {
 
           <button
             type="submit"
-            class="btn1 btn btn-primary"
+            className="btn1 btn btn-primary"
             onClick={onSubmitHandler}
           >
             Submit

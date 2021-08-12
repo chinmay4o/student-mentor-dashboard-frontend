@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <>
       <nav
         className="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg"
-        style={{ "min-height": "70px" }}
+        style={{ "minHeight": "70px" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="#" >
             <h2 className="fs-2 fw-bold">Assignments</h2>
           </a>
           <button
@@ -60,9 +60,9 @@ const Nav = () => {
               </li> */}
              
              {/* //dropdown */}
-              <div class="dropstart">
+              <div className="dropstart">
                 <button
-                  class="btn btnn btn-secondary dropdown-toggle"
+                  className="btn btnn btn-secondary dropdown-toggle"
                   type="button"
                   id="dropdownMenu2"
                   data-bs-toggle="dropdown"
@@ -70,9 +70,9 @@ const Nav = () => {
                 >
                   More
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li>
-                    <button class="dropdown-item" type="button">
+                    <button className="dropdown-item" type="button">
                     <Link to="/contact">
                   {" "}
                   Contact Us
@@ -80,7 +80,7 @@ const Nav = () => {
                     </button>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
+                    <button className="dropdown-item" type="button">
                     <Link  to="/register">
                   {" "}
                   Register
@@ -88,7 +88,7 @@ const Nav = () => {
                     </button>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
+                    <button className="dropdown-item" type="button">
                     <Link to="/login">
                   {" "}
                   Login
@@ -96,7 +96,7 @@ const Nav = () => {
                     </button>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
+                    <button className="dropdown-item" type="button">
                     <Link to="/showstudents">
                   {" "}
                   Show Students

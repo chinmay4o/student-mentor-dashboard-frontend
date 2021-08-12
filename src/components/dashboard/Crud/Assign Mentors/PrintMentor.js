@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const PrintMentor = ({ ele, count, setCount, assignMentors, setAssignMentors }) => {
+const PrintMentor = ({ ele, assignMentors, setAssignMentors }) => {
 
 
   return (
     <li className="list-group-item">
       <input
-        class="form-check-input me-3 p-2"
+        className="form-check-input me-3 p-2"
         type="radio"
         value={ele._id}
         name= "mentor"

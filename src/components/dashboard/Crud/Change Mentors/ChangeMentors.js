@@ -13,7 +13,6 @@ const ChangeMentors = () => {
   });
   const [assignStudents, setAssignStudents] = useState([]);
 
-  const [count, setCount] = useState(0);
 
 
   //toast function
@@ -152,9 +151,9 @@ const ChangeMentors = () => {
                 {students.length > 0 ? (
                   students.map(printStudents)
                 ) : (
-                  <div class="d-flex justify-content-center">
-                    <div class="spinner-border" role="status">
-                      <span class="visually-hidden">Loading...</span>
+                  <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                      <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
                 )}
@@ -168,9 +167,9 @@ const ChangeMentors = () => {
                 {mentors.length > 0 ? (
                   mentors.map(printMentors)
                 ) : (
-                  <div class="d-flex justify-content-center">
-                    <div class="spinner-border" role="status">
-                      <span class="visually-hidden">Loading...</span>
+                  <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                      <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
                 )}

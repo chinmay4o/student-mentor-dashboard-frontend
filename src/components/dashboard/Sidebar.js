@@ -11,23 +11,23 @@ const history = useHistory();
         <button className="btn btn-primary">close</button>
       </li> */}
       <li onClick={() => history.push("/addstudent")}>
-        <i class="bi bi-arrow-return-right"></i>
+        <i className="bi bi-arrow-return-right"></i>
         AddStudent
       </li>
       <li onClick={() => history.push("/addmentor")}>
-        <i class="bi bi-arrow-return-right"></i>
+        <i className="bi bi-arrow-return-right"></i>
         AddMentor
       </li>
       <li onClick={() => history.push("/assignmentor")}>
-        <i class="bi bi-arrow-return-right"></i>
+        <i className="bi bi-arrow-return-right"></i>
         Assign Mentor
       </li>
       <li onClick={() => history.push("/changementor")} >
-        <i class="bi bi-arrow-return-right"></i>
+        <i className="bi bi-arrow-return-right"></i>
         Change Mentor
       </li>
       <li onClick={() => history.push("/showstudents")} >
-        <i class="bi bi-arrow-return-right"></i>
+        <i className="bi bi-arrow-return-right"></i>
         Show students for selected mentors
       </li>
     </div>
