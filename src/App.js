@@ -9,6 +9,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import About from "./components/About.js";
 import AssignMentor from "./components/dashboard/Crud/Assign Mentors/AssignMentor.js";
 import ChangeMentor from "./components/dashboard/Crud/Change Mentors/ChangeMentors.js";
+import ShowStu from "./components/dashboard/Crud/Show Students/ShowStu.js";
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
 
        <Route path="/changementor">
          <ChangeMentor />
+       </Route>
+
+       <Route path="/showstudents">
+         <ShowStu />
        </Route>
      </Switch>
 

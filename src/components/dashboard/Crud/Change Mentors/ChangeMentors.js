@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Dashboard from "../../Dashboard.js";
 import "./changementor.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ChangeMentors = () => {
   const [students, setStudents] = useState([]);
@@ -12,6 +14,12 @@ const ChangeMentors = () => {
   const [assignStudents, setAssignStudents] = useState([]);
 
   const [count, setCount] = useState(0);
+
+
+  //toast function
+  const notify = () => {
+    toast("mentor changed! ")
+  }
 
   //getting students from database
   const listStudents = async () => {
@@ -93,7 +101,8 @@ const ChangeMentors = () => {
             });
           }}
         />
-        {ele.fname} ({ele._id})
+        {ele.fname} 
+        {/* ({ele._id}) */}
       </li>
     );
   }
@@ -114,7 +123,7 @@ const ChangeMentors = () => {
     });
 
     if (response.status === 200) {
-      alert("success");
+        notify();
       const data = await response.json();
       console.log(data);
     } else {
@@ -132,6 +141,7 @@ const ChangeMentors = () => {
     <>
       <div className="assign-parent">
         <Dashboard />
+        <ToastContainer />
         <div className="assign-child">
           <div className="row g-4">
             {/* students list */}

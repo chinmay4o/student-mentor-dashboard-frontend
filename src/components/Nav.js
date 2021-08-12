@@ -95,6 +95,14 @@ const Nav = () => {
                 </Link>
                     </button>
                   </li>
+                  <li>
+                    <button class="dropdown-item" type="button">
+                    <Link to="/showstudents">
+                  {" "}
+                  Show Students
+                </Link>
+                    </button>
+                  </li>
                 </ul>
               </div>
             </ul>

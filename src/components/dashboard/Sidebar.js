@@ -26,6 +26,10 @@ const history = useHistory();
         <i class="bi bi-arrow-return-right"></i>
         Change Mentor
       </li>
+      <li onClick={() => history.push("/showstudents")} >
+        <i class="bi bi-arrow-return-right"></i>
+        Show students for selected mentors
+      </li>
     </div>
   );
 };

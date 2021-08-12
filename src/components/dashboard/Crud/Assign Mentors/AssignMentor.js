@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Dashboard from "../../Dashboard";
 import "./assignmentor.css";
 import PrintMentor from "./PrintMentor";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AssignMentor = () => {
   const [students, setStudents] = useState([]);
@@ -15,6 +18,11 @@ const AssignMentor = () => {
 
   const [count, setCount] = useState(0);
 
+
+  //toast function
+  const notify = () => {
+    toast("mentor assigned! ")
+  }
   //getting students from database
   const listStudents = async () => {
     const response = await fetch("http://localhost:5004/students", {
@@ -107,7 +115,7 @@ const AssignMentor = () => {
     });
 
     if (response.status === 200) {
-      alert("success");
+      notify();
       const data = await response.json();
       console.log(data);
     } else {

@@ -3,6 +3,8 @@ import Dashboard from "../../Dashboard.js";
 import "./student.css";
 import { useHistory } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddStudent = () => {
   const history = useHistory();
@@ -11,6 +13,15 @@ const AddStudent = () => {
     lname: "",
   });
   const [data, setData] = useState([]);
+
+  //toast function
+const notify = () => {
+  toast("deleted student! ")
+}
+  //toast function
+const notify1 = () => {
+  toast("added student! ")
+}
 
   //onSubmit handler
   async function addStudentHandler(e) {
@@ -26,7 +37,7 @@ const AddStudent = () => {
 
     stuTable();
     if (response.status === 200) {
-      alert("Success");
+      notify1();
     }
   }
 
@@ -52,7 +63,7 @@ const AddStudent = () => {
 
     const data = await response.json();
     stuTable();
-    alert(JSON.stringify(data.error));
+    notify();
   }
 
   //tabel maaping;
@@ -93,6 +104,7 @@ const AddStudent = () => {
   }, []);
   return (
     <div className="addstu-parent">
+    <ToastContainer />
       <Dashboard />
 
       <div className="addstu-child p-5">
@@ -153,7 +165,7 @@ const AddStudent = () => {
                   <th scope="col">#</th>
                   <th scope="col">First</th>
                   <th scope="col">Last</th>
-                  <th scope="col">Date added</th>
+                  <th scope="col">Assign Mentor</th>
                   <th scope="col">More</th>
                 </tr>
               </thead>

@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Dashboard from "../../Dashboard.js";
 import "./mentor.css";
-import ReactTooltip from 'react-tooltip'
-
+import ReactTooltip from "react-tooltip";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddMentor = () => {
   const [mentorName, setMentorName] = useState({
     fname: "",
-    lname: ""
+    lname: "",
   });
   const [data, setData] = useState([]);
+
+  //toast function
+  const notify = () => {
+    toast("added mentor to the DB! ");
+  };
 
   // onclick creating mentor
   const addMentorHandler = async (e) => {
@@ -21,7 +27,7 @@ const AddMentor = () => {
     });
 
     if (response.status === 200) {
-      alert("success");
+      notify();
       getMentors();
     }
   };
@@ -42,10 +48,12 @@ const AddMentor = () => {
     return (
       <tr key={index}>
         <th scope="row">{index}</th>
-        <td>{ele.fname}</td> 
-        <td>{ele.lname}</td> 
-       <td>{ele.dateCreated}</td> 
-       <td role="button" onClick={() => true}>delete Me!</td>
+        <td>{ele.fname}</td>
+        <td>{ele.lname}</td>
+        <td>{ele.dateCreated}</td>
+        <td role="button" onClick={() => true}>
+          delete Me!
+        </td>
       </tr>
     );
   }
@@ -58,7 +66,7 @@ const AddMentor = () => {
   return (
     <div className="addMentor-parent">
       <Dashboard />
-
+      <ToastContainer />
       <div className="addMentor-container">
         <div className="row g-4">
           <p className="fw-bold fs-3 mb-3 d-grid justify-content-center">
@@ -75,7 +83,9 @@ const AddMentor = () => {
                 className="form-control"
                 id="mentor"
                 aria-describedby="fname"
-                onChange={(e) => setMentorName({...mentorName , fname: e.target.value})}
+                onChange={(e) =>
+                  setMentorName({ ...mentorName, fname: e.target.value })
+                }
               />
             </div>
             <div className="mb-3">
@@ -87,7 +97,9 @@ const AddMentor = () => {
                 className="form-control"
                 id="mentor"
                 aria-describedby="lname"
-                onChange={(e) => setMentorName({...mentorName , lname: e.target.value})}
+                onChange={(e) =>
+                  setMentorName({ ...mentorName, lname: e.target.value })
+                }
               />
             </div>
 

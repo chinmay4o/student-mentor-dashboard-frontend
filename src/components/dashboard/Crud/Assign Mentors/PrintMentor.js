@@ -17,7 +17,8 @@ const PrintMentor = ({ ele, count, setCount, assignMentors, setAssignMentors }) 
             console.log("assignMentors " + assignMentors);
         }}
       ></input>
-      {ele.fname} ({ele._id})
+      {ele.fname}
+       {/* ({ele._id}) */}
     </li>
   );
 };
