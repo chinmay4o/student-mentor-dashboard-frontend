@@ -4,6 +4,6 @@ In this dashboard you can add students to the databse edit the students details 
 Assign mentors to the students and also can Change the assigned mentor to the student.
 
 ## upcoming features
-login, signup \
-JWT authentication \
+Login, Signup \
+JWT authentication
 
